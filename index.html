@@ -1,19 +1,15 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Document</title>
-</head>
+<html>
+  <head>
+    <title>What 2 Watch</title>
+  </head>
 
+  
 <body>
-    <header>
-        <h2>What 2 Watch</h2>
-    </header>
-    <section id="searchBar">
+
+ <section id="searchBar">
         <form action="/action_page.php">
             <input type="text" placeholder="Search Movie.." name="search">
             <button type="submit" class="btn">Go!</i></button>
@@ -25,7 +21,36 @@
     <section id="api2">
         <h3></h3>
     </section>
-    <script src="./assets/script.js"></script>
+<section> 
+    <div id = "MoviesDB-Table" class = "comparison-table">
+        <h3>MoviesDB</h3>
+        <p id="MoviesDBData">Comparing results...</p>
+        <script>
+            fetch('https://rapidapi.com/standingapi-standingapi-default/api/moviesdb5/')
+            .then(response => respson.json() )
+            .then(data => {
+                const  dataElement = document.getElementById('MovidesDBData');
+                dataElement.textContent = `What 2 Watch: ${MoviesDBData}`;
+            });
+            .catch(error => {
+                console.error('Eror fetching data:', error);
+            });
+        </script>
+    <div id = "TMBD-Table" class = "comparison-table">
+        <h3>TMBD</h3>
+        <p id="TMBDData">Comparing results...</p>
+        <script>
+            fetch('https://developers.themoviedb.org/3/getting-started/introduction')
+            .then(response => respson.json() )
+            .then(data => {
+                const  dataElement = document.getElementById('TMBDData');
+                dataElement.textContent = `What 2 Watch: ${TMBDData}`;
+            });
+            .catch(error => {
+                console.error('Eror fetching data:', error);
+            });
+        </script>
+</section>
 </body>
 
 </html>
