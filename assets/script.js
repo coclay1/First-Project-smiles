@@ -29,10 +29,8 @@ var buttonClick = function (event) {
         .then(function (data) {
           console.log(data);
 
-
         })
     })
-
   console.log(event)
 }
 userFormEl.addEventListener("submit", buttonClick);
@@ -47,7 +45,6 @@ var buttonClick = function (event) {
 }
 
 
-// userFormEl.addEventListener("submit", buttonClick2);
 //Local Storage
 var searchHistoryEl = document.querySelector("#searchHistory")
 var searchBarEl = document.querySelector("#searchBar")
