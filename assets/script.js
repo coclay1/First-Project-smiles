@@ -15,6 +15,7 @@ var buttonClick = function (event) {
   fetch(queryURL)
     .then(function (response) {
       console.log(response);
+
       return response.json();
     })
     .then(function (data) {
@@ -31,6 +32,7 @@ var buttonClick = function (event) {
 
         })
     })
+
   console.log(event)
 }
 userFormEl.addEventListener("submit", buttonClick);
@@ -41,4 +43,5 @@ var buttonClick = function (event) {
     return;
   }
   var movie = movieInput.value;
+
 }
