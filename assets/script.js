@@ -31,12 +31,9 @@ var buttonClick = function (event) {
           console.log(data);
         })
     })
-
   console.log(event)
-
 }
 userFormEl.addEventListener("submit", buttonClick);
-
 
 var buttonClick = function (event) {
   event.preventDefault()
@@ -44,6 +41,5 @@ var buttonClick = function (event) {
     return;
   }
   var movie = movieInput.value;
-
 }
 
