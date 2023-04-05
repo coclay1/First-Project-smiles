@@ -1,3 +1,59 @@
+
+var userFormEl = document.querySelector('#user-form');
+var movieInput = document.querySelector('.movieInput');
+var omdbAPIKey = "3bb8b603";
+var tmdbAPIKey = "0ae5ef49885f7fea865abcc7fbc4aef3";
+// omdbapi.com - send all data requests to http://www.omdbapi.com/?apikey=[yourkey]&
+
+
+
+var buttonClick = function (event) {
+  event.preventDefault()
+  if (!movieInput.value) {
+    return;
+  }
+  var movie = movieInput.value;
+  var queryURL = "http://www.omdbapi.com/?t=" + movie + "&apikey=" + omdbAPIKey;
+  // https://api.themoviedb.org/3/movie/550?api_key=0ae5ef49885f7fea865abcc7fbc4aef3
+  // https://api.themoviedb.org/3/find/ZAa?api_key=PUT_YOUR_API_KEY_HERE&language=en-US&external_source=imdb_id
+  // var queryURL2 = "https://api.themoviedb.org/3/movie/550?t=" + movie + "&apikey=" + tmdbAPIKey;
+  var queryURL2 = "https://api.themoviedb.org/3/find/tt0133093?api_key="+tmdbAPIKey+"&language=en-US&external_source=imdb_id";
+  console.log(event)
+  fetch(queryURL)
+    .then(function (response) {
+      console.log(response);
+
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    })
+  
+  console.log(event)
+  fetch(queryURL2)
+    .then(function (response) {
+      console.log(response);
+
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    })
+}
+userFormEl.addEventListener("submit", buttonClick);
+
+
+
+var buttonClick = function (event) {
+  event.preventDefault()
+  if (!movieInput.value) {
+    return;
+  }
+  var movie = movieInput.value;
+
+}
+// userFormEl.addEventListener("submit", buttonClick2);
+//Local Storage
 var searchHistoryEl = document.querySelector("#searchHistory")
 var searchBarEl = document.querySelector("#searchBar")
 var searchTextEl = document.querySelector("#searchText")
@@ -57,3 +113,4 @@ var historyArr = [];
  })
 
 init()
+

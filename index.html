@@ -1,25 +1,32 @@
 <!-- index.html -->
 <!DOCTYPE html>
 
-<html>
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What 2 Watch</title>
-  </head>
 
+    <!-- jQuery UI CDN Link for CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+    <!-- Google Fonts (Optional) -->
+
+    <!-- Our Custom CSS link all must be loaded above before our CSS-->
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<html>
   
 <body>
-
-    <header>
-        <h2>What 2 Watch</h2>
-    </header>
-    <section>
-        <form id="searchBar" name="text">
-            <input id="searchText" type="text" placeholder="Search Movie.." name="search">
-
+    <section id="searchBar">
+        <form id="user-form">
+            <input class="movieInput" type="text" placeholder="Search Movie.." name="search">
 
  <section id="searchBar">
         <form action="/action_page.php">
             <input type="text" placeholder="Search Movie.." name="search">
+
             <button type="submit" class="btn">Go!</i></button>
 
         </form>
@@ -31,6 +38,8 @@
     <section id="api2">
         <h3></h3>
     </section>
+
+
 <section> 
     <div id = "MoviesDB-Table" class = "comparison-table">
         <h3>MoviesDB</h3>
@@ -61,6 +70,26 @@
             });
         </script>
 </section>
+
+
+    <!-- Bootstrap Script for JS functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery Loaded in via CDN script tag -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- jQuery UI Loaded in via CDN script tag MUST COME AFTER REGULAR JQUERY-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- dayjs for our date time library -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+    <!-- All must be loaded before our own personal script.js -->
+    <script type="text/javascript" src="./assets/script.js"></script>
+
 </body>
 
 </html>
