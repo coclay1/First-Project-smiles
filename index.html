@@ -7,8 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What 2 Watch</title>
 
-    <!-- jQuery UI CDN Link for CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+<body>
+<section> 
+    <div id = "MoviesDB-Table" class = "comparison-table">
+        <h3>MoviesDB</h3>
+        <p id="MoviesDBData">Comparing results...</p>
+
+    <div id = "TMBD-Table" class = "comparison-table">
+        <h3>TMBD</h3>
+        <p id="TMBDData">Comparing results...</p>
+
+</section>
+<html lang="en">
+
+<html>
+  <head>
+    <title>What 2 Watch</title>
+  </head>
+
+<body>
 
     <!-- Google Fonts (Optional) -->
 
@@ -25,10 +42,8 @@
 
  <section id="searchBar">
         <form action="/action_page.php">
-            <input type="text" placeholder="Search Movie.." name="search">
-
-            <button type="submit" class="btn">Go!</i></button>
-
+            <input type="text" placeholder="Search Movie.." id="inputBar" name="search">
+            <button type="submit" id="submitButton" class="btn">Go!</i></button>
         </form>
         <ul id="searchHistory"></ul>
     </section>
@@ -50,7 +65,7 @@
             .then(data => {
                 const  dataElement = document.getElementById('MovidesDBData');
                 dataElement.textContent = `What 2 Watch: ${MoviesDBData}`;
-            });
+            })
             .catch(error => {
                 console.error('Eror fetching data:', error);
             });
@@ -64,7 +79,7 @@
             .then(data => {
                 const  dataElement = document.getElementById('TMBDData');
                 dataElement.textContent = `What 2 Watch: ${TMBDData}`;
-            });
+            })
             .catch(error => {
                 console.error('Eror fetching data:', error);
             });
