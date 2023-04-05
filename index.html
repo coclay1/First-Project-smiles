@@ -1,110 +1,53 @@
 <!-- index.html -->
 <!DOCTYPE html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What 2 Watch</title>
-
-<body>
-<section> 
-    <div id = "MoviesDB-Table" class = "comparison-table">
-        <h3>MoviesDB</h3>
-        <p id="MoviesDBData">Comparing results...</p>
-
-    <div id = "TMBD-Table" class = "comparison-table">
-        <h3>TMBD</h3>
-        <p id="TMBDData">Comparing results...</p>
-
-</section>
-<html lang="en">
-
-<html>
-  <head>
-    <title>What 2 Watch</title>
-  </head>
-
-<body>
-
-    <!-- Google Fonts (Optional) -->
-
-    <!-- Our Custom CSS link all must be loaded above before our CSS-->
-    <link rel="stylesheet" href="./assets/style.css" />
 </head>
-
-<html>
-  
-<body>
-    <section id="searchBar">
-        <form id="user-form">
-            <input class="movieInput" type="text" placeholder="Search Movie.." name="search">
-
- <section id="searchBar">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search Movie.." id="inputBar" name="search">
-            <button type="submit" id="submitButton" class="btn">Go!</i></button>
-        </form>
-        <ul id="searchHistory"></ul>
+    <section>
+        <div id="MoviesDB-Table" class="comparison-table">
+            <h3>MoviesDB</h3>
+            <p id="MoviesDBData">Comparing results...</p>
     </section>
-    <section id="api1">
-        <h3></h3>
-    </section>
-    <section id="api2">
-        <h3></h3>
-    </section>
+    <html lang="en">
+        <!-- Our Custom CSS link all must be loaded above before our CSS-->
+    <link rel="stylesheet" href="./assets/style.css" />
+    </head>
+
+    <body>
+        <section id="searchBar">
+            <form id="user-form">
+                <input class="movieInput" type="text" placeholder="Search Movie.." name="search">
+                <button type="submit" id="submitButton" class="btn">Go!</i></button>
+            </form>
+            <ul id="searchHistory"></ul>
+        </section>
+        <section id="api1">
+            <h3></h3>
+        </section>
+        <section id="api2">
+            <h3></h3>
+        </section>
 
 
-<section> 
-    <div id = "MoviesDB-Table" class = "comparison-table">
-        <h3>MoviesDB</h3>
-        <p id="MoviesDBData">Comparing results...</p>
-        <script>
-            fetch('https://rapidapi.com/standingapi-standingapi-default/api/moviesdb5/')
-            .then(response => respson.json() )
-            .then(data => {
-                const  dataElement = document.getElementById('MovidesDBData');
-                dataElement.textContent = `What 2 Watch: ${MoviesDBData}`;
-            })
-            .catch(error => {
-                console.error('Eror fetching data:', error);
-            });
-        </script>
-    <div id = "TMBD-Table" class = "comparison-table">
-        <h3>TMBD</h3>
-        <p id="TMBDData">Comparing results...</p>
-        <script>
-            fetch('https://developers.themoviedb.org/3/getting-started/introduction')
-            .then(response => respson.json() )
-            .then(data => {
-                const  dataElement = document.getElementById('TMBDData');
-                dataElement.textContent = `What 2 Watch: ${TMBDData}`;
-            })
-            .catch(error => {
-                console.error('Eror fetching data:', error);
-            });
-        </script>
-</section>
+        <!-- Bootstrap Script for JS functionality -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+            </script>
 
+        <!-- jQuery Loaded in via CDN script tag -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    <!-- Bootstrap Script for JS functionality -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
-    </script>
+        <!-- jQuery UI Loaded in via CDN script tag MUST COME AFTER REGULAR JQUERY-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <!-- jQuery Loaded in via CDN script tag -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- dayjs for our date time library -->
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+            integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
-    <!-- jQuery UI Loaded in via CDN script tag MUST COME AFTER REGULAR JQUERY-->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <!-- dayjs for our date time library -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
-    <!-- All must be loaded before our own personal script.js -->
-    <script type="text/javascript" src="./assets/script.js"></script>
-
-</body>
-
+        <!-- All must be loaded before our own personal script.js -->
+        <script type="text/javascript" src="./assets/script.js"></script>
+    </body>
 </html>
