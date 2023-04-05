@@ -6,7 +6,6 @@
     <title>What 2 Watch</title>
   </head>
 
-  
 <body>
 <section> 
     <div id = "MoviesDB-Table" class = "comparison-table">
@@ -20,13 +19,11 @@
 </section>
 <html lang="en">
 
-
 <html>
   <head>
     <title>What 2 Watch</title>
   </head>
 
-  
 <body>
 
  <section id="searchBar">
@@ -44,8 +41,6 @@
 
     <script src="./assets/script.js"></script>
 
-
-
 <section> 
     <div id = "MoviesDB-Table" class = "comparison-table">
         <h3>MoviesDB</h3>
@@ -56,7 +51,7 @@
             .then(data => {
                 const  dataElement = document.getElementById('MovidesDBData');
                 dataElement.textContent = `What 2 Watch: ${MoviesDBData}`;
-            });
+            })
             .catch(error => {
                 console.error('Eror fetching data:', error);
             });
@@ -70,7 +65,7 @@
             .then(data => {
                 const  dataElement = document.getElementById('TMBDData');
                 dataElement.textContent = `What 2 Watch: ${TMBDData}`;
-            });
+            })
             .catch(error => {
                 console.error('Eror fetching data:', error);
             });
