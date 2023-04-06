@@ -1,16 +1,16 @@
-.hero.is-primary{
+.hero.is-primary {
     background-color: #386ec3;
 }
 
-.hero.is-primary .title{
+.hero.is-primary .title {
     color: #ebb600;
     font-weight: bolder;
 }
 
-#headimg{
-height: 250px;
-width: 250px;
-margin-left: 560px;
+#headimg {
+    height: 250px;
+    width: 250px;
+    margin-left: 560px;
 }
 
 .button.is-primary {
@@ -18,22 +18,29 @@ margin-left: 560px;
 }
 
 
-#TMBD-Table{
-border: solid;
-border-color: #c42b2b;
-padding: 10px;
-margin-bottom: 30px;
+#TMBD-Table {
+    border: solid;
+    border-color: #c42b2b;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 #MoviesDB-Table {
-border: solid;
-border-color: #c42b2b;
-padding: 10px;
-margin-bottom: 30px;
+    border: solid;
+    border-color: #c42b2b;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#searchBox {
+    border: solid;
+    border-color: #c42b2b;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 .footer {
     background-color: #386ec3;
-    color:  #ebb600;
+    color: #ebb600;
     font-weight: bold;
 }
