@@ -1,13 +1,33 @@
-<html lang="en">
-    <!-- Our Custom CSS link all must be loaded above before our CSS-->
-<link rel="stylesheet" href="./assets/style.css" />
+<!-- index.html -->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>What 2 Watch</title>
 </head>
 
 <body>
-    <section id="searchBar">
+    <section class="hero is-primary is-small">
+        <div class="hero-body">
+            <p class="title">
+                What 2 Watch
+                <img src="./assets/Images/sean-benesh-6Nbo9Pn0yJA-unsplash.jpg" id="headimg" alt="Movies in a store">
+            </p>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="field" id="searchBar">
         <form id="user-form">
-            <input id="searchText" class="movieInput" type="text" placeholder="Search Movie.." name="search">
-            <button type="submit" id="submitButton" class="btn">Go!</i></button>
+            <input id="searchText class=" movieInput" class="input is-large" type="text" placeholder="Search Movie.."
+                name="search">
+            <button class="button is-primary" class="button is-info" type="submit" id="submitButton"
+                class="btn">Go!</i></button>
+            </div>
         </form>
         <ul id="searchHistory"></ul>
     </section>
@@ -18,7 +38,26 @@
         <h3></h3>
     </section>
 
-    
+    <!-- Comparision Table -->
+    <section>
+        <div class="columns">
+            <div class="column">
+                <div id="MoviesDB-Table" class="comparison-table">
+                    <h3>MoviesDB</h3>
+                    <p id="MoviesDBData">Comparing results...</p>
+                    <p id="omdbRating">Rating: </p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="TMBD-Table" class="comparison-table">
+                    <h3>TMBD</h3>
+                    <p id="TMBDData">Comparing results...</p>
+                    <p id="tmdbRating">Rating:</p>
+                </div>
+            </div>
+    </section>
+
 
     <!-- Bootstrap Script for JS functionality -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
@@ -37,5 +76,14 @@
 
     <!-- All must be loaded before our own personal script.js -->
     <script type="text/javascript" src="./assets/script.js"></script>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Created by: Coc Ley, Lukas Durkin, Brooke White, Courtney Einsig
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>
