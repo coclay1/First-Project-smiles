@@ -6,6 +6,9 @@ var omdbRating = document.getElementById("omdbRating");
 var tmdbRating = document.getElementById("tmdbRating");
 var title1 = document.getElementById("titleOne");
 var title2 = document.getElementById("titleTwo");
+var poster1 = document.getElementById("posterOne")
+var poster2 = document.getElementById("posterTwo")
+
 
 var buttonClick = function (event) {
   event.preventDefault()
@@ -32,6 +35,11 @@ var buttonClick = function (event) {
       title1.textContent = titleData;
 
 
+      // document.getElementById("posterOne").setAttribute("src", data.Poster)
+      var posterData = (data.Poster);
+      poster1.setAttribute("src", data.Poster);
+
+
       var queryURL2 = "https://api.themoviedb.org/3/find/" + data.imdbID + "?api_key=" + tmdbAPIKey + "&language=en-US&external_source=imdb_id";
       fetch(queryURL2)
         .then(function (response) {
@@ -47,6 +55,8 @@ var buttonClick = function (event) {
           var titleData2 = (data.movie_results[0].title);
           title2.textContent = titleData2;
 
+          var posterData2 = (data.movie_results[0].poster_path);
+          poster2.setAttribute("src", "https://image.tmdb.org/t/p/original/" +  posterData2);
         })
     })
   console.log(event)
