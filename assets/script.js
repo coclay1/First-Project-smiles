@@ -48,7 +48,6 @@ var movieInput = document.querySelector('.movieInput');
 var omdbAPIKey = "3bb8b603";
 var tmdbAPIKey = "0ae5ef49885f7fea865abcc7fbc4aef3";
 
-
 var buttonClick = function (event) {
   event.preventDefault()
   if (!movieInput.value) {
@@ -67,7 +66,6 @@ var buttonClick = function (event) {
   fetch(queryURL)
     .then(function (response) {
       console.log(response);
-
       return response.json();
     })
     .then(function (data) {
@@ -80,6 +78,8 @@ var buttonClick = function (event) {
         })
         .then(function (data) {
           console.log(data);
+          
+
         })
     })
 
@@ -93,6 +93,9 @@ var buttonClick = function (event) {
     return;
   }
   var movie = movieInput.value;
+
+}
+
 }
 
 // userFormEl.addEventListener("submit", buttonClick2);
