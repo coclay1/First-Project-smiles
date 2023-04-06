@@ -71,6 +71,7 @@ tmdbLocation.append(tmdbRating);
 
 
 
+
 //Local Storage
 var searchHistoryEl = document.querySelector("#searchHistory")
 var searchBarEl = document.querySelector("#searchBar")
