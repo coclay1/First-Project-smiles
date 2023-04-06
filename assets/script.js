@@ -104,3 +104,4 @@ searchHistoryEl.addEventListener("click", function (event) {
   }
 })
 
+init()
