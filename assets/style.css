@@ -1,6 +1,38 @@
+.hero.is-primary{
+    background-color: #386ec3;
+}
+
+.hero.is-primary .title{
+    color: #ebb600;
+}
 
 #headimg{
 height: 250px;
 width: 250px;
-justify-content: center;
+margin-left: 560px;
+}
+
+.button.is-primary {
+    background-color: #386ec3;
+}
+
+
+#TMBD-Table{
+border: solid;
+border-color: #c42b2b;
+padding: 10px;
+margin-bottom: 30px;
+}
+
+#MoviesDB-Table {
+border: solid;
+border-color: #c42b2b;
+padding: 10px;
+margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #386ec3;
+    color: 	#ebb600;
+    font-weight: bold;
 }
