@@ -29,19 +29,18 @@
                 class="btn">Go!</i></button>
             </div>
         </form>
-        <ul id="searchHistory"></ul>
-    </section>
-    <section id="api1">
-        <h3></h3>
-    </section>
-    <section id="api2">
-        <h3></h3>
     </section>
 
     <!-- Comparision Table -->
     <section>
         <div class="columns">
-            <div class="column">
+            <div class="column is-2">
+                <div id="searchBox">
+                    <h3>Search History:</h3>
+                  <ul id="searchHistory"></ul>  
+                </div>
+            </div>
+            <div class="column is-5">
                 <div id="MoviesDB-Table" class="comparison-table">
                     <h3>MoviesDB</h3>
                     <p id="MoviesDBData">Comparing results...</p>
@@ -49,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="column">
+            <div class="column is-5">
                 <div id="TMBD-Table" class="comparison-table">
                     <h3>TMBD</h3>
                     <p id="TMBDData">Comparing results...</p>
@@ -80,7 +79,7 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                Created by: Coc Ley, Lukas Durkin, Brooke White, Courtney Einsig
+                Created by: Coc Lay, Lukas Durkin, Brooke White, Courtney Einsig
             </p>
         </div>
     </footer>
