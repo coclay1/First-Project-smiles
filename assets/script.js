@@ -23,6 +23,7 @@ var buttonClick = function (event) {
     .then(function (response) {
       console.log(response);
 
+      
       return response.json();
     })
     .then(function (data) {
