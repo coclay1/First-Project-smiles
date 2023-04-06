@@ -1,33 +1,13 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>What 2 Watch</title>
+<html lang="en">
+    <!-- Our Custom CSS link all must be loaded above before our CSS-->
+<link rel="stylesheet" href="./assets/style.css" />
 </head>
 
-
 <body>
-    <!-- Header code -->
-    <section class="hero is-primary is-small">
-        <div class="hero-body">
-            <p class="title">
-                What 2 Watch
-            </p>
-            <img src="./assets/Images/sean-benesh-6Nbo9Pn0yJA-unsplash.jpg" id="headimg" alt="Movies in a store">
-            <p class="subtitle">
-                Created by: Coc Ley, Lukas Durkin, Brooke White, Courtney Einsig
-            </p>
-        </div>
-    </section>
-    <!-- Search Bar -->
     <section id="searchBar">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search Movie.." id="inputBar" name="search">
-            <button type="submit" id="submitButton" class="btn" class="button is-link is-outlined">Go!</i></button>
+        <form id="user-form">
+            <input class="movieInput" type="text" placeholder="Search Movie.." name="search">
+            <button type="submit" id="submitButton" class="btn">Go!</i></button>
         </form>
         <ul id="searchHistory"></ul>
     </section>
@@ -36,45 +16,6 @@
     </section>
     <section id="api2">
         <h3></h3>
-    </section>
-    <!-- Comparision Table -->
-    <section>
-        <div class="columns">
-            <div class="column">
-                <div id="MoviesDB-Table" class="comparison-table">
-                    <h3>MoviesDB</h3>
-                    <p id="MoviesDBData">Comparing results...</p>
-                    <script>
-                        fetch('https://rapidapi.com/standingapi-standingapi-default/api/moviesdb5/')
-                            .then(response => respson.json())
-                            .then(data => {
-                                const dataElement = document.getElementById('MovidesDBData');
-                                dataElement.textContent = `What 2 Watch: ${MoviesDBData}`;
-                            })
-                            .catch(error => {
-                                console.error('Eror fetching data:', error);
-                            });
-                    </script>
-                </div>
-            </div>
-
-            <div class="column">
-                <div id="TMBD-Table" class="comparison-table">
-                    <h3>TMBD</h3>
-                    <p id="TMBDData">Comparing results...</p>
-                    <script>
-                        fetch('https://developers.themoviedb.org/3/getting-started/introduction')
-                            .then(response => respson.json())
-                            .then(data => {
-                                const dataElement = document.getElementById('TMBDData');
-                                dataElement.textContent = `What 2 Watch: ${TMBDData}`;
-                            })
-                            .catch(error => {
-                                console.error('Eror fetching data:', error);
-                            });
-                    </script>
-                </div>
-            </div>
     </section>
 
 
@@ -95,7 +36,5 @@
 
     <!-- All must be loaded before our own personal script.js -->
     <script type="text/javascript" src="./assets/script.js"></script>
-
 </body>
-
 </html>
