@@ -1,48 +1,3 @@
-
-//APIs Code       
-function tmdbFetch() {
-  fetch('https://api.themoviedb.org/3/search/movie?api_key=a3bbed4a6852f63fa3cf3288ada02070&query=' + document.querySelector('#inputBar').value.trim())
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      const dataElement = document.getElementById('TMBDData');
-      dataElement.textContent = `What 2 Watch: ${data.results[0].title}`;
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
-
-}
-
-function moviesDbFetch() {
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fe1eb2d7d4msheca0d298fe99168p191519jsn9d55acf114b1',
-      'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
-    }
-  };
-  fetch('https://moviesdatabase.p.rapidapi.com/titles/search/keyword/' + document.querySelector('#inputBar').value.trim(), options)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      const dataElement = document.getElementById('MoviesDBData');
-      dataElement.textContent = `What 2 Watch: ${data}`;
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
-}
-
-document.querySelector("#submitButton").addEventListener("click", function (event) {
-  event.preventDefault();
-  moviesDbFetch();
-  tmdbFetch();
-})
-
-//Code for search results
-
-
 var userFormEl = document.querySelector('#user-form');
 var movieInput = document.querySelector('.movieInput');
 var omdbAPIKey = "3bb8b603";
@@ -56,20 +11,21 @@ var buttonClick = function (event) {
   var movie = movieInput.value;
   var queryURL = "http://www.omdbapi.com/?t=" + movie + "&apikey=" + omdbAPIKey;
 
-  // https://api.themoviedb.org/3/movie/550?api_key=0ae5ef49885f7fea865abcc7fbc4aef3
-  // https://api.themoviedb.org/3/find/ZAa?api_key=PUT_YOUR_API_KEY_HERE&language=en-US&external_source=imdb_id
-  // var queryURL2 = "https://api.themoviedb.org/3/movie/550?t=" + movie + "&apikey=" + tmdbAPIKey;
-  var queryURL2 = "https://api.themoviedb.org/3/find/tt0133093?api_key=" + tmdbAPIKey + "&language=en-US&external_source=imdb_id";
-
-
   console.log(event)
   fetch(queryURL)
     .then(function (response) {
       console.log(response);
+
       return response.json();
     })
     .then(function (data) {
       console.log(data);
+      console.log(data.imdbRating);
+      // grabbing API data here for OMDB
+      var omdbRatingData = (data.imdbRating);
+      omdbRating.textContent = omdbRatingData;
+
+
       var queryURL2 = "https://api.themoviedb.org/3/find/" + data.imdbID + "?api_key=" + tmdbAPIKey + "&language=en-US&external_source=imdb_id";
       fetch(queryURL2)
         .then(function (response) {
@@ -78,11 +34,13 @@ var buttonClick = function (event) {
         })
         .then(function (data) {
           console.log(data);
-          
+          console.log(data.movie_results[0].vote_average);
+          // grabbing API data here for TMDB
+          var tmdbRatingData = (data.movie_results[0].vote_average);
+          tmdbRating.textContent = tmdbRatingData;
 
         })
     })
-
   console.log(event)
 }
 userFormEl.addEventListener("submit", buttonClick);
@@ -95,10 +53,25 @@ var buttonClick = function (event) {
   var movie = movieInput.value;
 
 }
+// store API data, create element,append
+var omdbRating = document.createElement('p');
+var tmdbRating = document.createElement('p');
+
+var omdbLocation = document.querySelector('#omdbRating');
+var tmdbLocation = document.querySelector('#tmdbRating');
+
+omdbLocation.append(omdbRating);
+tmdbLocation.append(tmdbRating);
 
 
 
-// userFormEl.addEventListener("submit", buttonClick2);
+
+
+
+
+
+
+
 //Local Storage
 var searchHistoryEl = document.querySelector("#searchHistory")
 var searchBarEl = document.querySelector("#searchBar")
@@ -158,3 +131,4 @@ searchHistoryEl.addEventListener("click", function (event) {
   }
 })
 
+init()

@@ -1,3 +1,4 @@
+
 <!-- index.html -->
 <!DOCTYPE html>
 
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>What 2 Watch</title>
+
 </head>
 
-
 <body>
+
     <!-- Header code -->
     <section class="hero is-primary is-small">
         <div class="hero-body">
@@ -23,11 +25,12 @@
     </section>
     <!-- Search Bar -->
     <section class="field" id="searchBar">
-        <form action="/action_page.php">
-            <input class="input is-large" type="text" placeholder="Search Movie.." id="inputBar" name="search">
+        <form id="user-form">
+            <input id="searchText class="movieInput" class="input is-large" type="text" placeholder="Search Movie.."  name="search">
             <button class="button is-primary" class="button is-info" type="submit" id="submitButton"
                 class="btn">Go!</i></button>
             </div>
+
         </form>
         <ul id="searchHistory"></ul>
     </section>
@@ -37,6 +40,7 @@
     <section id="api2">
         <h3></h3>
     </section>
+
     <!-- Comparision Table -->
     <section>
         <div class="columns">
@@ -80,6 +84,7 @@
     </section>
 
 
+
     <!-- Bootstrap Script for JS functionality -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
@@ -98,6 +103,7 @@
     <!-- All must be loaded before our own personal script.js -->
     <script type="text/javascript" src="./assets/script.js"></script>
 
+
     <footer class="footer">
         <div class="content has-text-centered">
           <p>
@@ -105,5 +111,6 @@
           </p>
         </div>
       </footer>
+
 </body>
 </html>
