@@ -5,12 +5,15 @@
 .hero.is-primary .title {
     color: #ebb600;
     font-weight: bolder;
+    font-family: 'Lilita One', cursive;
+    font-size: 85px;
 }
 
 #headimg {
     height: 250px;
     width: 250px;
     margin-left: 560px;
+    position: relative;
 }
 
 .button.is-primary {

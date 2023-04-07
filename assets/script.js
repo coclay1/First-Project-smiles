@@ -16,7 +16,7 @@ var buttonClick = function (event) {
     return;
   }
   var movie = movieInput.value;
-  var queryURL = "http://www.omdbapi.com/?t=" + movie + "&apikey=" + omdbAPIKey;
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=" + omdbAPIKey;
 
   console.log(event)
   fetch(queryURL)
