@@ -4,7 +4,7 @@
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-What 2 Watch is a collaborative effort to build a web application to allow users to compare reviews of movies they are interested in. This application was built to reduces the amount of websites a user has to visit inorder to get a review for a movie. This web application was built using [Bulma](https://bulma.io/) as the CSS Framework, [TMDB]( https://developers.themoviedb.org/3/getting-started/introduction) and [Movie Database](https://rapidapi.com/standingapi-standingapi-default/api/moviesdb5/) as the web apis and JavaScript. 
+What 2 Watch is a collaborative effort to build a web application to allow users to compare reviews of movies they are interested in. This application was built to reduce the amount of websites a user has to visit in order to get a review for a movie. This web application was built using [Bulma](https://bulma.io/) as the CSS Framework, [TMDB]( https://developers.themoviedb.org/3/getting-started/introduction) and [Movie Database](https://rapidapi.com/standingapi-standingapi-default/api/moviesdb5/) as the web apis and JavaScript. 
 
 ## Usage
 
